@@ -22,7 +22,7 @@ const handleClose = () => {
             images.
           </h1>
           <p className=" text-[19px] mt-7 md:text-[22px]">
-            Lets enjoy the beauty of this gallery app
+            Lets enjoy the beauty of this gallery app.
           </p>
           <div className="mt-16">
             <button className="text-[17px] font-normal bg-slate-700 rounded-md px-3 py-3 hover:bg-slate-600 md:py-4 md:text-[18px]" onClick={handleLoginForm}>
