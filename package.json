@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://supremacy00.github.io/Zuri_internship_task_three/",
+  "homepage": "https://supremacy00.github.io/Zuri_internship_task_three",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
