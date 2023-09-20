@@ -1,4 +1,4 @@
-// Import necessary dependencies
+
 import PropTypes from "prop-types";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
@@ -19,11 +19,11 @@ const Login = ({ handleClose }) => {
     setIsLoading(true);
     try {
       if (email === "user@example.com" && password === "1Password") {
-        // Sign in with Firebase using signInWithEmailAndPassword
+      
         const auth = getAuth();
         await signInWithEmailAndPassword(auth, email, password);
         setIsLoading(false);
-        navigate("/homepage"); // Redirect the user after successful login
+        navigate("/homepage"); 
       } else {
         setError("Invalid email or password");
         setIsLoading(false)
@@ -43,7 +43,7 @@ const Login = ({ handleClose }) => {
         className="object-cover hidden rounded-l-lg w-[400px] max-h-[532px] lg:block"
         alt=""
       />
-       <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] mx-6 md:py-32  lg:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
+       <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] mx-6 md:py-[170px]  md:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
         <div>
           <span
             className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px]"
