@@ -59,7 +59,6 @@ const Login = ({ handleClose }) => {
      </div>
       
       :  <form onSubmit={handleLogin}>
-         <h2 className="text-2xl font-semibold  text-slate-800 mb-4">Login</h2>
           <div className="mb-4">
             <label htmlFor="email" className="text-gray-700 block font-bold">
               Email

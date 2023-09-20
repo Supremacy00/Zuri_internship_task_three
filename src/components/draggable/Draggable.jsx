@@ -8,7 +8,6 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const DraggableGallery = ({filteredImages, initialImages}) => {
 
-  const [mouseOver, setMouseOver] = useState(false)
 
   
 
