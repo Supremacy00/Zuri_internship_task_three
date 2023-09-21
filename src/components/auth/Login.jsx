@@ -43,7 +43,7 @@ const Login = ({ handleClose }) => {
       <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] mx-6 md:py-[170px]  md:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
         <div>
           <span
-            className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px]"
+            className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px] hover:bg-slate-200"
             onClick={handleClose}
           >
             <MdClose />

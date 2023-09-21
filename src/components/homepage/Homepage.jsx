@@ -33,13 +33,13 @@ const Homepage = () => {
     <div className="font-roboto bg-slate-50 h-sreen">
       <SignOut />
       <div>
-        <h1 className="text-center pt-8 text-[30px] px-4 sm:px-0 md:text-4xl ">
+        <h1 className="text-center pt-8 text-[30px] px-4 sm:px-0 md:pt-4 md:text-4xl ">
           Welcome to Supremacy Gallery
         </h1>
         <div className="flex justify-center items-start text-center px-5 mt-8 sm:mx-0 md:mt-12  ">
           <input
             type="text"
-            className=" w-[400px] h-12 pl-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className=" w-[400px] h-12 pl-3 pr-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-slate-500 focus:ring focus:ring-slate-200"
             placeholder="Search..."
             value={searchText}
             onChange={handleSearch}

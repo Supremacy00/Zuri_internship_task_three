@@ -7,7 +7,7 @@ const Footer = () => {
       <div>
         <div className="flex justify-center items-center gap-8 md:gap-10">
           {socialMediaIcons.map((item) => (
-            <div key={item.id} className="text-[20px] md:text-[25px]">{item.icon}</div>
+            <div key={item.id} className="text-[20px] md:text-[25px] cursor-pointer">{item.icon}</div>
           ))}
         </div>
         <div className="flex justify-center items-center text-[15px] mt-6 gap-3  sm:gap-6  sm:mt-10 sm:text-[17px]">
