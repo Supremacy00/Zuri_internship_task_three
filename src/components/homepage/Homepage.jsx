@@ -1,6 +1,7 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DraggableGallery from "../draggable/Draggable";
+import { HashLoader} from "react-spinners"
+
 
 const Homepage = () => {
 
@@ -32,6 +33,14 @@ const Homepage = () => {
     setFilteredImages(filtered);
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, [])
+
   return (
     <div className="font-roboto bg-slate-200 h-sreen">
       <div>
@@ -48,7 +57,14 @@ const Homepage = () => {
           />
         </div>
       </div>
-      <DraggableGallery filteredImages={filteredImages} initialImages={initialImages}/>
+      {isLoading ? (
+          <div className="flex justify-center items-center h-screen relative bottom-44 text-red-700">
+            <HashLoader color="#000000" />
+          </div>
+        ) : (
+          <DraggableGallery filteredImages={filteredImages} initialImages={initialImages}/>
+        )}
+     
     </div>
   );
 };
