@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import DraggableGallery from "../draggable/Draggable";
 import { HashLoader} from "react-spinners"
+import Footer from "../footer/Footer";
+import SignOut from "../auth/SignOut";
+
 
 
 const Homepage = () => {
+
+ 
 
   const initialImages = [
     { id: 'image1', src: '/images/blueandyellowbird.jpg', title: 'Blue and Yellow Bird' },
@@ -35,19 +40,24 @@ const Homepage = () => {
 
   const [isLoading, setIsLoading] = useState(true);
 
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
   }, [])
 
+  
+
+
   return (
-    <div className="font-roboto bg-slate-200 h-sreen">
+    <div className="font-roboto bg-slate-50 h-sreen">
+      <SignOut />
       <div>
-        <h1 className="text-center pt-12 text-4xl">
+        <h1 className="text-center pt-8 text-[30px] px-4 sm:px-0 md:text-4xl ">
           Welcome to Supremacy Gallery
         </h1>
-        <div className="flex justify-center items-start text-center mt-12 px-2 sm:mx-0">
+        <div className="flex justify-center items-start text-center px-5 mt-8 sm:mx-0 md:mt-12  ">
           <input
             type="text"
             className=" w-[400px] h-12 pl-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
@@ -64,7 +74,7 @@ const Homepage = () => {
         ) : (
           <DraggableGallery filteredImages={filteredImages} initialImages={initialImages}/>
         )}
-     
+     <Footer />
     </div>
   );
 };
