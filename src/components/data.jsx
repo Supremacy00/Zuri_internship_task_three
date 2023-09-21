@@ -16,7 +16,7 @@ export const initialImages = [
     src: "/images/lighteningstrike.jpg",
     title: "Lightening Strike",
   },
-  { id: "image5", src: "/images/pandaandcub.jpg", title: "Pand and Cub" },
+  { id: "image5", src: "/images/pandaandcub.jpg", title: "Panda and Cub" },
   {
     id: "image6",
     src: "/images/squirreleatingcone.jpg",
