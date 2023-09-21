@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import DraggableGallery from "../draggable/Draggable";
 import { HashLoader } from "react-spinners";
-import { BiSearch } from "react-icons/bi"
+import { BiSearch } from "react-icons/bi";
 import Footer from "../footer/Footer";
 import SignOut from "../auth/SignOut";
 import { initialImages } from "../data";
 
 const Homepage = () => {
-  
   const [searchText, setSearchText] = useState("");
   const [filteredImages, setFilteredImages] = useState(initialImages);
 

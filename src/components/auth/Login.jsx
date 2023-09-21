@@ -40,18 +40,18 @@ const Login = ({ handleClose }) => {
         className="object-cover hidden rounded-l-lg w-[400px] max-h-[532px] lg:block"
         alt=""
       />
-      <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] mx-6 md:py-[170px]  md:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
+      <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] mx-6 md:py-32  lg:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
         <div>
           <span
-            className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px] hover:bg-slate-200"
+            className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px]"
             onClick={handleClose}
           >
             <MdClose />
           </span>
         </div>
         {isLoading ? (
-          <div className="h-screen relative flex justify-center top-[90px] text-red-700">
-            <HashLoader color="#000000" />
+          <div className="h-screen relative flex justify-center top-[100px] text-red-700">
+            <HashLoader color="#FF0000" />
           </div>
         ) : (
           <form onSubmit={handleLogin}>
@@ -63,7 +63,7 @@ const Login = ({ handleClose }) => {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-500"
+                className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-cyan-500"
                 placeholder="Your email"
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -80,7 +80,7 @@ const Login = ({ handleClose }) => {
                 type="password"
                 id="password"
                 name="password"
-                className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-500"
+                className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-cyan-500"
                 placeholder="Your password"
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -89,11 +89,11 @@ const Login = ({ handleClose }) => {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="text-white bg-slate-700 px-4 py-2 rounded-md hover:bg-slate-600 focus:outline-none focus:bg-slate-600"
+                className="text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 focus:outline-none focus:bg-cyan-600"
               >
                 Sign In
               </button>
-              <a href="#" className="text-slate-700 hover:underline">
+              <a href="#" className="text-cyan-500 hover:underline">
                 Forgot Password?
               </a>
             </div>

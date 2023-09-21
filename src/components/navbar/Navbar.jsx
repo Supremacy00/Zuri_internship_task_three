@@ -3,7 +3,7 @@ import Smedia from "../smedia/Smedia";
 
 const Navbar = () => {
   const backgroundImage = "/images/backgroundimage.jpg";
-  
+
   return (
     <>
       <nav
