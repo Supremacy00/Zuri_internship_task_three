@@ -5,15 +5,13 @@ const Header = () => {
 
   const handleLoginForm = () => {
     setShowLoginForm(true);
+  };
 
-};
-
-const handleClose = () => {
-  setShowLoginForm(false)
-}
+  const handleClose = () => {
+    setShowLoginForm(false);
+  };
 
   return (
-   
     <div>
       <section>
         <div className="container mx-auto font-roboto mt-36 text-white px-5 sm:px-6 sm:mt-44 md:mt-28 sm:max-w-[1300px]">
@@ -25,15 +23,17 @@ const handleClose = () => {
             Lets enjoy the beauty of this gallery app.
           </p>
           <div className="mt-16">
-            <button className="text-[17px] font-normal bg-slate-700 rounded-md px-3 py-3 hover:bg-slate-600 md:py-4 md:text-[18px]" onClick={handleLoginForm}>
+            <button
+              className="text-[17px] font-normal bg-slate-700 rounded-md px-3 py-3 hover:bg-slate-600 md:py-4 md:text-[18px]"
+              onClick={handleLoginForm}
+            >
               Login Here
             </button>
           </div>
         </div>
-        {showLoginForm && <Login handleClose={handleClose}/>}
+        {showLoginForm && <Login handleClose={handleClose} />}
       </section>
     </div>
-   
   );
 };
 

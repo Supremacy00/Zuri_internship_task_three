@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import Homepage from "./components/homepage/Homepage";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HashLoader} from "react-spinners"
+import { HashLoader } from "react-spinners";
 
 function App() {
-
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -15,7 +13,6 @@ function App() {
     }, 1500);
   }, []);
 
-  
   return (
     <BrowserRouter>
       <div>

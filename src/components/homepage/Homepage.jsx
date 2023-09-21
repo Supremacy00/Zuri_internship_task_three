@@ -1,31 +1,13 @@
 import { useState, useEffect } from "react";
 import DraggableGallery from "../draggable/Draggable";
-import { HashLoader} from "react-spinners"
+import { HashLoader } from "react-spinners";
 import Footer from "../footer/Footer";
 import SignOut from "../auth/SignOut";
-
-
+import { initialImages } from "../data";
 
 const Homepage = () => {
-
- 
-
-  const initialImages = [
-    { id: 'image1', src: '/images/blueandyellowbird.jpg', title: 'Blue and Yellow Bird' },
-    { id: 'image2', src: '/images/thewaterfalls.jpg', title: 'The Waterfall' },
-    { id: 'image3', src: '/images/greenforest.jpg', title: 'Green Forest' },
-    { id: 'image4', src: '/images/lighteningstrike.jpg', title: 'Lightening Strike' },
-    { id: 'image5', src: '/images/pandaandcub.jpg', title: 'Pand and Cub' },
-    { id: 'image6', src: '/images/squirreleatingcone.jpg', title: 'Squirrel Eating Cone' },
-    { id: 'image7', src: '/images/runninghorses.jpg', title: 'Running Horses' },
-    { id: 'image8', src: '/images/aigenerated.jpg', title: 'Ai Generated Dogs' },
-    { id: 'image9', src: '/images/antarctica.jpg', title: 'View of Antarctica' },
-    { id: 'image10', src: '/images/bloomingsunflower.jpg', title: 'Blooming Sunflower' },
-    { id: 'image11', src: '/images/redadmiralbutterfly.jpg', title: 'Red Admiral Butterfly' },
-    { id: 'image12', src: '/images/perfectsunrise.jpg', title: 'Perfect Sunrise' },
-    
-  ];
-  const [searchText, setSearchText] = useState('');
+  
+  const [searchText, setSearchText] = useState("");
   const [filteredImages, setFilteredImages] = useState(initialImages);
 
   const handleSearch = (e) => {
@@ -40,15 +22,11 @@ const Homepage = () => {
 
   const [isLoading, setIsLoading] = useState(true);
 
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
-  }, [])
-
-  
-
+  }, []);
 
   return (
     <div className="font-roboto bg-slate-50 h-sreen">
@@ -68,16 +46,18 @@ const Homepage = () => {
         </div>
       </div>
       {isLoading ? (
-          <div className="flex justify-center items-center h-screen relative bottom-44 text-red-700">
-            <HashLoader color="#000000" />
-          </div>
-        ) : (
-          <DraggableGallery filteredImages={filteredImages} initialImages={initialImages}/>
-        )}
-     <Footer />
+        <div className="flex justify-center items-center h-screen relative bottom-44 text-red-700">
+          <HashLoader color="#000000" />
+        </div>
+      ) : (
+        <DraggableGallery
+          filteredImages={filteredImages}
+          initialImages={initialImages}
+        />
+      )}
+      <Footer />
     </div>
   );
 };
-
 
 export default Homepage;
