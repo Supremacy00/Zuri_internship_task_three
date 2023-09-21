@@ -28,7 +28,7 @@ const SignOut = () => {
           className="text-[16px] bg-slate-600 px-3 py-2 text-slate-100 rounded-md hover:bg-slate-700 md:px-4 md:py-2 md:text-md"
           onClick={handleSignOut}
         >{`${isLoading ? "Login Out.." : "Log Out"}`}</button>
-        <SlMenu className="text-3xl" />
+        <SlMenu className="text-2xl md:text-3xl" />
       </div>
     </div>
   );
