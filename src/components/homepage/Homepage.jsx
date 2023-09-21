@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import DraggableGallery from "../draggable/Draggable";
 import { HashLoader } from "react-spinners";
+import { BiSearch } from "react-icons/bi"
 import Footer from "../footer/Footer";
 import SignOut from "../auth/SignOut";
 import { initialImages } from "../data";
@@ -43,6 +44,9 @@ const Homepage = () => {
             value={searchText}
             onChange={handleSearch}
           />
+          <div className="relative right-8 top-3.5 text-[22px] text-slate-600">
+            <BiSearch />
+          </div>
         </div>
       </div>
       {isLoading ? (
