@@ -56,12 +56,22 @@ const DraggableGallery = ({ filteredImages, initialImages }) => {
 
   return (
     <div className="container mx-auto mt-24">
+      <style>
+        {`
+          .react-grid-item {
+            padding: 10px; 
+          }
+          .react-resizable-handle {
+            display: none; 
+          }
+        `}
+      </style>
       <ResponsiveGridLayout
         className="pattern"
         layouts={{ lg: pattern }}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         cols={{ lg: 4, md: 3, sm: 3, xs: 2, xxs: 1 }}
-        rowHeight={300}
+        rowHeight={400}
         width={1000}
         onDrop={(patternItem, targetPattern) =>
           handleDrop(patternItem, targetPattern)
@@ -78,7 +88,7 @@ const DraggableGallery = ({ filteredImages, initialImages }) => {
               alt={image.title}
               className="w-full h-full object-cover relative"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="absolute inset-2.5 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <p className="text-white text-center">{image.title}</p>
             </div>
           </div>
