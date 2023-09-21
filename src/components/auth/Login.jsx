@@ -40,10 +40,10 @@ const Login = ({ handleClose }) => {
         className="object-cover hidden rounded-l-lg w-[400px] max-h-[532px] lg:block"
         alt=""
       />
-      <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] mx-6 md:py-32  lg:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
+      <div className="bg-slate-100 rounded-lg shadow-xl relative px-8 py-20 max-h-[432px] lg:py-44  lg:max-h-[532px] lg:mx-0 lg:px-16 lg:rounded-l-none w-[400px] ">
         <div>
           <span
-            className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px]"
+            className="text-slate-500 cursor-pointer absolute top-4 right-4 text-[27px] hover:bg-slate-200"
             onClick={handleClose}
           >
             <MdClose />
@@ -93,7 +93,7 @@ const Login = ({ handleClose }) => {
               >
                 Sign In
               </button>
-              <a href="#" className="text-slate-500 hover:underline">
+              <a href="#" className="text-slate-700 hover:underline">
                 Forgot Password?
               </a>
             </div>
