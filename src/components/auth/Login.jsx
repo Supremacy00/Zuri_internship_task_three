@@ -50,7 +50,7 @@ const Login = ({ handleClose }) => {
           </span>
         </div>
         {isLoading ? (
-          <div className="h-screen relative flex justify-center top-[100px] text-red-700">
+          <div className="h-screen relative flex justify-center top-[70px] text-red-700">
             <HashLoader color="#000000" />
           </div>
         ) : (
