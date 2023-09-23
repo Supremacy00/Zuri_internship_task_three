@@ -9,7 +9,6 @@ import { initialImages } from "../data";
 const Homepage = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredImages, setFilteredImages] = useState(initialImages);
-  const [isLoading, setIsLoading] = useState(true);
 
   const handleSearch = (e) => {
     const text = e.target.value.toLowerCase();
@@ -21,6 +20,8 @@ const Homepage = () => {
     setFilteredImages(filtered);
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -28,21 +29,21 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="font-roboto bg-black h-sreen">
+    <div className="font-roboto bg-slate-50 h-sreen">
       <SignOut />
       <div>
-        <h1 className="text-center pt-8 text-4xl sm:pt-4 text-white">
+        <h1 className="text-center pt-8 text-[30px] px-4 sm:px-0 md:pt-4 md:text-4xl ">
           Welcome to Supremacy Gallery
         </h1>
-        <div className="flex justify-center items-start text-center mt-8 sm:mx-0 md:mt-12">
+        <div className="flex justify-center items-start text-center pl-5 mt-8 sm:mx-0 md:mt-12  ">
           <input
             type="text"
-            className="w-[400px] h-12 pl-3 pr-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-slate-500 focus:ring focus:ring-slate-200"
+            className=" w-[400px] h-12 pl-3 pr-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-slate-500 focus:ring focus:ring-slate-200"
             placeholder="Search..."
             value={searchText}
             onChange={handleSearch}
           />
-          <div className="relative right-8 top-3.5 text-2xl text-slate-600">
+          <div className="relative right-8 top-3.5 text-[22px] text-slate-600">
             <BiSearch />
           </div>
         </div>
