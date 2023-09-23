@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <footer className="mt-44 pb-12 font-roboto md:mt-44 md:pb-36">
       <div>
-        <div className="flex justify-center items-center gap-8 md:gap-10">
+        <div className="flex justify-center items-center gap-8 md:gap-10 text-white">
           {socialMediaIcons.map((item) => (
             <div key={item.id} className="text-[20px] md:text-[25px] cursor-pointer">{item.icon}</div>
           ))}
         </div>
-        <div className="flex justify-center items-center text-[15px] mt-6 gap-3  sm:gap-6  sm:mt-10 sm:text-[17px]">
+        <div className="flex justify-center text-white items-center text-[15px] mt-6 gap-3  sm:gap-6  sm:mt-10 sm:text-[17px]">
           {footerLinks.map((item) => (
             <div key={item.id}>
               <div>{item.label}</div>

@@ -28,10 +28,10 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="font-roboto bg-slate-50 h-sreen">
+    <div className="font-roboto bg-black h-sreen">
       <SignOut />
       <div>
-        <h1 className="text-center pt-8 text-4xl sm:pt-4">
+        <h1 className="text-center pt-8 text-4xl sm:pt-4 text-white">
           Welcome to Supremacy Gallery
         </h1>
         <div className="flex justify-center items-start text-center mt-8 sm:mx-0 md:mt-12">

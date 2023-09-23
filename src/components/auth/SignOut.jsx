@@ -25,10 +25,10 @@ const SignOut = () => {
     <div>
       <div className="flex justify-between items-center mx-auto max-w-[1240px] px-4 pt-6 sm:pt-8  xl:px-0">
         <button
-          className="text-[16px] border border-slate-600 px-3 py-2 text-black rounded-md hover:bg-slate-100 md:px-6 md:py-3 md:text-md"
+          className="text-[16px] border border-slate-800 px-3 py-2 text-white rounded-md hover:border-slate-500 md:px-6 md:py-3 md:text-md"
           onClick={handleSignOut}
         >{`${isLoading ? "Login Out.." : "Log Out"}`}</button>
-        <SlMenu className="text-2xl md:text-3xl" />
+        <SlMenu className="text-2xl md:text-3xl text-white" />
       </div>
     </div>
   );
