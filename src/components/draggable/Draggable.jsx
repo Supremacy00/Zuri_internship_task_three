@@ -7,7 +7,7 @@ import "react-resizable/css/styles.css";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const DraggableGallery = ({ filteredImages, initialImages }) => {
-  const [pattern, setPattern] = useState(
+  const [pattern, setPattern] = useState(() =>
     initialImages.map((image, index) => ({
       i: image.id,
       x: index % 4,
@@ -18,19 +18,19 @@ const DraggableGallery = ({ filteredImages, initialImages }) => {
   );
 
   useEffect(() => {
-    const handleBrealPoints = () => {
-      setPattern((prevPattern) => {
-        return prevPattern.map((item, index) => ({
+    const handleBreakpoints = () => {
+      setPattern((prevPattern) =>
+        prevPattern.map((item, index) => ({
           ...item,
           x: index % 4,
           y: Math.floor(index / 4),
-        }));
-      });
+        }))
+      );
     };
 
-    window.addEventListener("resize", handleBrealPoints);
+    window.addEventListener("resize", handleBreakpoints);
     return () => {
-      window.removeEventListener("resize", handleBrealPoints);
+      window.removeEventListener("resize", handleBreakpoints);
     };
   }, []);
 
@@ -59,10 +59,10 @@ const DraggableGallery = ({ filteredImages, initialImages }) => {
       <style>
         {`
           .react-grid-item {
-            padding: 10px; 
+            padding: 10px;
           }
           .react-resizable-handle {
-            display: none; 
+            display: none;
           }
         `}
       </style>
@@ -73,14 +73,12 @@ const DraggableGallery = ({ filteredImages, initialImages }) => {
         cols={{ lg: 4, md: 3, sm: 3, xs: 2, xxs: 1 }}
         rowHeight={400}
         width={1000}
-        onDrop={(patternItem, targetPattern) =>
-          handleDrop(patternItem, targetPattern)
-        }
+        onDrop={(patternItem, targetPattern) => handleDrop(patternItem, targetPattern)}
       >
         {filteredImages.map((image) => (
           <div
             key={image.id}
-            className="  cursor-pointer group "
+            className="cursor-pointer group"
             onMouseOver={handleMouseOver}
           >
             <img
@@ -97,6 +95,7 @@ const DraggableGallery = ({ filteredImages, initialImages }) => {
     </div>
   );
 };
+
 DraggableGallery.propTypes = {
   filteredImages: PropTypes.array.isRequired,
   initialImages: PropTypes.array.isRequired,

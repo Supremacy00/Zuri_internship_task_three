@@ -8,14 +8,23 @@ import { HashLoader } from "react-spinners";
 const Login = ({ handleClose }) => {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    const { email, password } = formData;
+
     try {
       if (email === "user@example.com" && password === "1Password") {
         const auth = getAuth();
@@ -63,9 +72,10 @@ const Login = ({ handleClose }) => {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-500"
                 placeholder="Your email"
-                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -80,9 +90,10 @@ const Login = ({ handleClose }) => {
                 type="password"
                 id="password"
                 name="password"
+                value={formData.password}
+                onChange={handleInputChange}
                 className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-500"
                 placeholder="Your password"
-                onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
@@ -99,7 +110,7 @@ const Login = ({ handleClose }) => {
             </div>
           </form>
         )}
-        {error && <p className="text-red-500 mt-4">{error}</p>}{" "}
+        {error && <p className="text-red-500 mt-4">{error}</p>}
       </div>
     </div>
   );
